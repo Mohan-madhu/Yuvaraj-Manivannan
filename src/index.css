@@ -27,26 +27,26 @@ button { font: inherit; cursor: pointer; }
 @media (max-width: 640px) { .typing-role { min-height: 2.1em; } }
 .soft-card, .project-card, .stat-card { transform-style: preserve-3d; will-change: transform, opacity; }
 .soft-card { transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, border-color .35s ease; }
-.soft-card:hover { transform: translateY(-7px) rotateX(1.5deg); border-color: #ffb59c; box-shadow: 0 18px 34px rgba(52, 39, 104, .14); }
+.soft-card:hover { transform: translateY(-5px); border-color: #ffb59c; box-shadow: 0 18px 34px rgba(52, 39, 104, .14); }
 .skill-chip { position: relative; overflow: hidden; transition: transform .28s ease, color .28s ease, background .28s ease, box-shadow .28s ease; }
-.skill-chip::after { content: ''; position: absolute; inset: 0; transform: translateX(-115%) skewX(-20deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,.8), transparent); transition: transform .55s ease; }
+.skill-chip::after { content: ''; position: absolute; inset: 0; transform: translateX(-115%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.8), transparent); transition: transform .55s ease; }
 .skill-chip:hover { transform: translateY(-3px) scale(1.05); background: var(--color-orange); color: white; box-shadow: 0 8px 18px rgba(255,116,67,.28); }
-.skill-chip:hover::after { transform: translateX(115%) skewX(-20deg); }
+.skill-chip:hover::after { transform: translateX(115%); }
 .project-card { transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease; }
-.project-card:hover { transform: translateY(-9px) scale(1.012); box-shadow: 0 24px 45px rgba(52, 39, 104, .2); }
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 24px 45px rgba(52, 39, 104, .2); }
 .stat-card { transition: transform .3s ease, background .3s ease; }
 .stat-card:hover { transform: translateY(-5px); background: #ffe5d9; }
 .project-filter { position: relative; overflow: hidden; }
 .project-filter::before { content: ''; position: absolute; inset: 0; opacity: 0; background: linear-gradient(110deg, transparent 28%, rgba(255,255,255,.3), transparent 70%); transform: translateX(-100%); transition: transform .5s ease, opacity .3s ease; }
 .project-filter:hover::before { opacity: 1; transform: translateX(100%); }
 #skills .grid { gap: 1.25rem; }
-#skills .soft-card { min-height: 13.5rem; padding: 1.65rem; border-color: #efe4df; background: linear-gradient(145deg, #fff 0%, #fffaf7 100%); }
+#skills .soft-card { min-height: 0; padding: 1.65rem; border-color: #efe4df; background: linear-gradient(145deg, #fff 0%, #fffaf7 100%); }
 #skills .soft-card h3 { display: flex; align-items: center; gap: .65rem; margin-bottom: 1.25rem; color: var(--color-ink); font-size: 1rem; }
 #skills .soft-card h3::before { content: ''; width: .55rem; height: .55rem; border-radius: 999px; background: var(--color-orange); box-shadow: 0 0 0 .32rem rgba(255,116,67,.14); }
-#skills .soft-card > div { gap: .6rem; align-content: flex-start; }
-#skills .skill-chip { padding: .5rem .72rem; border: 1px solid #fae3d9; background: #fff6f0; color: #35415f; font-size: .72rem; line-height: 1; }
+#skills .soft-card > div { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .65rem; align-content: flex-start; }
+#skills .skill-chip { display: flex; min-height: 2.25rem; width: 100%; align-items: center; justify-content: center; padding: .45rem .4rem; border: 1px solid #fae3d9; background: #fff6f0; color: #35415f; font-size: .72rem; line-height: 1.2; text-align: center; }
 #skills .skill-chip:hover { border-color: transparent; }
-@media (max-width: 640px) { #skills .soft-card { min-height: auto; padding: 1.25rem; } #skills .skill-chip { font-size: .67rem; padding: .47rem .62rem; } }
+@media (max-width: 640px) { #skills .soft-card { padding: 1.25rem; } #skills .soft-card > div { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; } #skills .skill-chip { min-height: 2.1rem; font-size: .67rem; padding: .42rem .4rem; } }
 #projects.section { padding-top: 3.5rem; }
 #projects .reveal-block { margin-bottom: 2rem; }
 #projects .project-card { transform: none; }

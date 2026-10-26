@@ -76,12 +76,12 @@ export default function App() {
       ScrollTrigger.batch('.soft-card, .stat-card, .future-panel, .future-education-card, .future-cert-card', {
         start: 'top 88%',
         once: true,
-        onEnter: (cards) => gsap.from(cards, { y: 34, scale: .94, rotationX: -7, transformPerspective: 900, duration: .72, stagger: .09, ease: 'power3.out', overwrite: 'auto' }),
+        onEnter: (cards) => gsap.from(cards, { y: 24, scale: .98, duration: .55, stagger: .08, ease: 'power3.out', overwrite: 'auto' }),
       })
       ScrollTrigger.batch('.skill-chip', {
         start: 'top 91%',
         once: true,
-        onEnter: (chips) => gsap.from(chips, { y: 16, scale: .72, rotation: -5, duration: .46, stagger: .035, ease: 'back.out(1.7)', overwrite: 'auto' }),
+        onEnter: (chips) => gsap.from(chips, { y: 10, scale: .9, duration: .35, stagger: .03, ease: 'power2.out', overwrite: 'auto' }),
       })
     }, app)
     return () => { ctx.revert(); gsap.ticker.remove(update); lenis.destroy() }
