@@ -68,25 +68,25 @@ export default function App() {
       gsap.from('.hero-content > *', { y: 28, opacity: 0, duration: .65, stagger: .1, ease: 'power3.out', delay: .12 })
       gsap.from('.hero-photo', { scale: .88, opacity: 0, duration: .85, ease: 'back.out(1.3)', delay: .24 })
       document.querySelectorAll('.split-text').forEach((element) => {
-        gsap.from(element.querySelectorAll('.split-letter'), { yPercent: 115, opacity: 0, duration: .5, stagger: .026, ease: 'power3.out', scrollTrigger: { trigger: element, start: 'top 84%' } })
+        gsap.from(element.querySelectorAll('.split-letter'), { yPercent: 115, duration: .5, stagger: .026, ease: 'power3.out', scrollTrigger: { trigger: element, start: 'top 84%' } })
       })
       gsap.utils.toArray('.reveal-block').forEach((element) => {
-        gsap.from(element, { y: 28, opacity: 0, duration: .65, ease: 'power3.out', scrollTrigger: { trigger: element, start: 'top 84%' } })
+        gsap.from(element, { y: 28, duration: .65, ease: 'power3.out', scrollTrigger: { trigger: element, start: 'top 84%' } })
       })
       ScrollTrigger.batch('.soft-card, .project-card, .stat-card, .future-panel, .future-education-card, .future-cert-card', {
         start: 'top 88%',
         once: true,
-        onEnter: (cards) => gsap.from(cards, { opacity: 0, y: 34, scale: .94, rotationX: -7, transformPerspective: 900, duration: .72, stagger: .09, ease: 'power3.out', overwrite: 'auto' }),
+        onEnter: (cards) => gsap.from(cards, { y: 34, scale: .94, rotationX: -7, transformPerspective: 900, duration: .72, stagger: .09, ease: 'power3.out', overwrite: 'auto' }),
       })
       ScrollTrigger.batch('.skill-chip', {
         start: 'top 91%',
         once: true,
-        onEnter: (chips) => gsap.from(chips, { opacity: 0, y: 16, scale: .72, rotation: -5, duration: .46, stagger: .035, ease: 'back.out(1.7)', overwrite: 'auto' }),
+        onEnter: (chips) => gsap.from(chips, { y: 16, scale: .72, rotation: -5, duration: .46, stagger: .035, ease: 'back.out(1.7)', overwrite: 'auto' }),
       })
       ScrollTrigger.batch('.project-filter', {
         start: 'top 90%',
         once: true,
-        onEnter: (buttons) => gsap.from(buttons, { opacity: 0, x: -20, duration: .42, stagger: .08, ease: 'power2.out' }),
+        onEnter: (buttons) => gsap.from(buttons, { x: -20, duration: .42, stagger: .08, ease: 'power2.out' }),
       })
     }, app)
     return () => { ctx.revert(); gsap.ticker.remove(update); lenis.destroy() }
