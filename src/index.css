@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #132353;
+  --color-orange: #ff7443;
+  --color-paper: #fff8f3;
+  --color-peach: #fff0e8;
+  --color-purple: #6f3ecb;
+  --font-display: "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; color: var(--color-ink); background: white; font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; text-decoration: none; }
+.display { font-family: var(--font-display); letter-spacing: -0.055em; }
+.section { padding: 6rem 1.25rem; }
+.container { max-width: 1120px; margin: 0 auto; }
+.eyebrow { color: var(--color-orange); font-size: .69rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.soft-card { background: white; border: 1px solid #eee9e6; border-radius: 17px; box-shadow: 0 7px 15px rgba(25,30,70,.08); }
+.split-text { display: inline-block; overflow: hidden; vertical-align: bottom; }
+.split-letter { display: inline-block; will-change: transform, opacity; }
