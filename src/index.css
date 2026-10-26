@@ -21,3 +21,7 @@ a { color: inherit; text-decoration: none; }
 .split-text { display: inline-block; overflow: hidden; vertical-align: bottom; }
 .split-letter { display: inline-block; will-change: transform, opacity; }
 button { font: inherit; cursor: pointer; }
+.typing-role { display: inline-block; min-height: 1.05em; }
+.typing-caret { display: inline-block; margin-left: .06em; color: var(--color-ink); animation: blink .72s step-end infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (max-width: 640px) { .typing-role { min-height: 2.1em; } }
