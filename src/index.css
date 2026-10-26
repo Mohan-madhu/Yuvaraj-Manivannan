@@ -11,6 +11,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 5rem; }
 body { margin: 0; min-width: 320px; color: var(--color-ink); background: white; font-family: Arial, Helvetica, sans-serif; }
 a { color: inherit; text-decoration: none; }
 .display { font-family: var(--font-display); letter-spacing: -0.055em; }
@@ -76,3 +77,39 @@ button { font: inherit; cursor: pointer; }
 .future-status { position: relative; z-index: 1; display: flex; align-items: center; gap: .6rem; margin-top: auto; padding-top: 1.5rem; color: #bac2e4; font-size: .72rem; }.future-status-dot { width: .5rem; height: .5rem; border-radius: 50%; background: #55e8a6; box-shadow: 0 0 .8rem #55e8a6; animation: pulse-orb 1.5s ease-in-out infinite; }
 @keyframes pulse-orb { 50% { transform: scale(.72); opacity: .55; } } @keyframes scan { to { transform: translateX(100%); } }
 @media (max-width: 640px) { .future-panel { padding: 1rem; }.future-card-content { padding: 1rem; }.future-card-top { display: grid; }.future-education-card { grid-template-columns: 2.2rem 1fr; gap: .7rem; }.future-node { width: 2.2rem; height: 2.2rem; } }
+@media (max-width: 768px) {
+  .section { padding: 4rem 1rem; }
+  .container { width: 100%; }
+  #home { padding-top: 5rem; }
+  #home > .container:first-child { min-height: auto; padding: 3.25rem 1.25rem 2.5rem; }
+  #home h1 { font-size: clamp(2.8rem, 13vw, 4.5rem); line-height: .9; }
+  #home .hero-photo { margin-top: .5rem; transform: scale(.9); transform-origin: top center; margin-bottom: -2.5rem; }
+  #home .hero-photo img { height: 340px; width: 252px; }
+  #home .hero-photo > div:not(:first-child) { font-size: 10px; }
+  #home > .container:last-child { padding: 1.25rem 1rem 2.5rem; }
+  #home .stat-card { min-height: 5.5rem; display: grid; place-content: center; }
+  .soft-card { border-radius: 1.1rem; }
+  #skills .grid { gap: 1rem; }
+  #projects.section { padding-top: 3rem; }
+  #projects .project-card > div:last-child { padding: 1.25rem; }
+  #projects .project-card h3 { font-size: 1.45rem; }
+  #projects .project-filter { padding: .65rem .85rem; }
+  .future-academics::before, .future-academics::after { width: 23rem; height: 23rem; }
+  .future-header > p:last-child { font-size: .85rem; }
+  .future-panel { border-radius: 1.15rem; }
+  .future-cert-card { padding: .85rem; }
+  footer .container { text-align: center; }
+}
+@media (max-width: 420px) {
+  .section { padding: 3.25rem .85rem; }
+  #home > .container:first-child { padding-inline: 1rem; }
+  #home h1 { font-size: clamp(2.45rem, 13vw, 3.2rem); }
+  #home .hero-photo { transform: scale(.78); margin-bottom: -4.7rem; }
+  #home > .container:last-child { grid-template-columns: 1fr 1fr; }
+  #home .stat-card { padding: .8rem .4rem; }
+  #home .stat-card b { font-size: 1.35rem; }
+  #projects .project-filter { font-size: .68rem; }
+  #projects .project-card > div:last-child { padding: 1rem; }
+  .future-card-content h3 { font-size: .84rem; }
+  .future-card-content p { font-size: .7rem; }
+}
