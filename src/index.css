@@ -47,6 +47,10 @@ button { font: inherit; cursor: pointer; }
 #skills .skill-chip { padding: .5rem .72rem; border: 1px solid #fae3d9; background: #fff6f0; color: #35415f; font-size: .72rem; line-height: 1; }
 #skills .skill-chip:hover { border-color: transparent; }
 @media (max-width: 640px) { #skills .soft-card { min-height: auto; padding: 1.25rem; } #skills .skill-chip { font-size: .67rem; padding: .47rem .62rem; } }
+#projects.section { padding-top: 3.5rem; }
+#projects .reveal-block { margin-bottom: 2rem; }
+#projects .project-card { transform: none; }
+@media (max-width: 640px) { #projects.section { padding-top: 2.5rem; } }
 .future-academics { position: relative; overflow: hidden; background: #0f1738; color: white; }
 .future-academics::before, .future-academics::after { content: ''; position: absolute; width: 34rem; height: 34rem; border-radius: 999px; pointer-events: none; filter: blur(6px); }
 .future-academics::before { top: -20rem; left: -14rem; background: radial-gradient(circle, rgba(116, 67, 207, .5), transparent 66%); }
