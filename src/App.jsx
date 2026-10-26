@@ -31,13 +31,14 @@ function RoleTyper() {
     const currentRole = roles[roleIndex]
     const finishedTyping = visibleText === currentRole
     const clearedText = visibleText === ''
-    const delay = finishedTyping ? 1550 : isDeleting ? 48 : 90
+    const delay = !isDeleting && finishedTyping ? 1550 : isDeleting ? 48 : 90
     const timer = window.setTimeout(() => {
-      if (finishedTyping) setIsDeleting(true)
-      else if (isDeleting && clearedText) {
+      if (isDeleting && clearedText) {
         setIsDeleting(false)
         setRoleIndex((roleIndex + 1) % roles.length)
-      } else setVisibleText(currentRole.slice(0, visibleText.length + (isDeleting ? -1 : 1)))
+      } else if (isDeleting) setVisibleText(currentRole.slice(0, visibleText.length - 1))
+      else if (finishedTyping) setIsDeleting(true)
+      else setVisibleText(currentRole.slice(0, visibleText.length + 1))
     }, delay)
     return () => window.clearTimeout(timer)
   }, [visibleText, isDeleting, roleIndex])
