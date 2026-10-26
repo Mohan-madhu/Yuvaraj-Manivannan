@@ -39,6 +39,14 @@ button { font: inherit; cursor: pointer; }
 .project-filter { position: relative; overflow: hidden; }
 .project-filter::before { content: ''; position: absolute; inset: 0; opacity: 0; background: linear-gradient(110deg, transparent 28%, rgba(255,255,255,.3), transparent 70%); transform: translateX(-100%); transition: transform .5s ease, opacity .3s ease; }
 .project-filter:hover::before { opacity: 1; transform: translateX(100%); }
+#skills .grid { gap: 1.25rem; }
+#skills .soft-card { min-height: 13.5rem; padding: 1.65rem; border-color: #efe4df; background: linear-gradient(145deg, #fff 0%, #fffaf7 100%); }
+#skills .soft-card h3 { display: flex; align-items: center; gap: .65rem; margin-bottom: 1.25rem; color: var(--color-ink); font-size: 1rem; }
+#skills .soft-card h3::before { content: ''; width: .55rem; height: .55rem; border-radius: 999px; background: var(--color-orange); box-shadow: 0 0 0 .32rem rgba(255,116,67,.14); }
+#skills .soft-card > div { gap: .6rem; align-content: flex-start; }
+#skills .skill-chip { padding: .5rem .72rem; border: 1px solid #fae3d9; background: #fff6f0; color: #35415f; font-size: .72rem; line-height: 1; }
+#skills .skill-chip:hover { border-color: transparent; }
+@media (max-width: 640px) { #skills .soft-card { min-height: auto; padding: 1.25rem; } #skills .skill-chip { font-size: .67rem; padding: .47rem .62rem; } }
 .future-academics { position: relative; overflow: hidden; background: #0f1738; color: white; }
 .future-academics::before, .future-academics::after { content: ''; position: absolute; width: 34rem; height: 34rem; border-radius: 999px; pointer-events: none; filter: blur(6px); }
 .future-academics::before { top: -20rem; left: -14rem; background: radial-gradient(circle, rgba(116, 67, 207, .5), transparent 66%); }
