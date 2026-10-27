@@ -1,0 +1,20 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#10193C"/>
+  <circle cx="1000" cy="110" r="250" fill="#6F3ECB" fill-opacity=".35"/>
+  <circle cx="135" cy="600" r="260" fill="#FF7443" fill-opacity=".18"/>
+  <rect x="110" y="110" width="390" height="455" rx="34" fill="#192657" stroke="#8E9FF4" stroke-opacity=".5" stroke-width="3"/>
+  <rect x="154" y="160" width="302" height="240" rx="18" fill="#0C132E"/>
+  <path d="M180 282H218L238 220L267 340L298 255L324 285H426" stroke="#FF7443" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="154" y="455" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="700">ESP32 Vital Signs Monitor</text>
+  <text x="154" y="498" fill="#BBC5EA" font-family="Arial, sans-serif" font-size="21">Heart rate · SpO₂ · Temperature</text>
+  <rect x="595" y="157" width="432" height="80" rx="18" fill="#FFFFFF" fill-opacity=".1"/>
+  <circle cx="640" cy="197" r="17" fill="#FF7443"/>
+  <text x="677" y="207" fill="white" font-family="Arial, sans-serif" font-size="27" font-weight="700">Sepsis Risk Monitoring</text>
+  <rect x="595" y="270" width="210" height="184" rx="22" fill="#FFFFFF" fill-opacity=".08"/>
+  <text x="630" y="327" fill="#BBC5EA" font-family="Arial, sans-serif" font-size="20">Heart Rate</text>
+  <text x="630" y="402" fill="white" font-family="Arial, sans-serif" font-size="52" font-weight="700">78 bpm</text>
+  <rect x="837" y="270" width="190" height="184" rx="22" fill="#FFFFFF" fill-opacity=".08"/>
+  <text x="871" y="327" fill="#BBC5EA" font-family="Arial, sans-serif" font-size="20">SpO₂</text>
+  <text x="871" y="402" fill="white" font-family="Arial, sans-serif" font-size="52" font-weight="700">98%</text>
+  <text x="595" y="530" fill="#FFB194" font-family="Arial, sans-serif" font-size="22" font-weight="700">IoT · Arduino IDE · Machine Learning</text>
+</svg>
